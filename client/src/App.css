@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", serif;
+  background-color: none;
+}
+/* home page */
+.home {
+  background-image: url("./image/background.avif");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 80%;
+  width: 35%;
+}
+
+.cube {
+  font-size: 7rem;
+  color: #ffa500;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.play-button-container {
+  width: 100%;
+}
+
+.play-button {
+  background-color: #57b846;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.3s linear all;
+}
+
+.play-button:hover {
+  background-color: #4a9d3b;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+
+.login {
+  background-color: #ea4355;
+  height: 50px;
+}
+
+.login:hover {
+  background-color: #cc3a4a;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signina{
+  background-color: #1da1f2;
+  height: 50px;
+}
+
+.signin:hover {
+  background-color: #1a91da;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container .buttons {
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 1rem 0;
+  text-align: center;
+  width: 45%;
+  transition: 0.3s linear all;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .home section {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .home section {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home section {
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .play-button {
+    font-size: 1rem;
+    padding: 0.8rem; 
+  }
+  .auth-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .auth-container .buttons {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .cube {
+    font-size: 5rem;
+  }
+  .play-button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    color: white !important;
+  }
+  .play-button:hover{
+    color: white !important;
+  }
+  .auth-container .buttons {
+    width: 50%;
+    height: 20ox !important;
+    
+  }  
+}
+ /* QuizInstruction page */
+.instruction {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 190px;
+  padding-top: 50px;
+  color: white;
+  overflow: hidden; 
+}
+
+.instruction::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./image/background.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8; 
+  z-index: -1; 
+  filter: brightness(50%); 
+}
+.lifeline-icon{
+  color:#4a9d3b;
+  cursor: pointer;
+}
+.browser-default{
+  padding-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.left a ,.right a{
+  color: white !important; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 15px;
+}
+.right{
+  padding-right: 300px;
+}
+
+.left a:hover, .right a:hover {
+  text-decoration: underline; 
+}
+
+@media (max-width: 1024px) {
+  .instruction {
+    padding-left: 150px;
+    padding-top: 30px;
+  }
+
+  .right {
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .instruction {
+    padding-left: 50px;
+    padding-top: 20px;
+    
+  }
+
+  .right {
+    padding-right: 50px;
+  }
+
+  .left a, .right a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instruction {
+    padding-left: 20px;
+    padding-top: 10px;
+    text-align: center; 
+  }
+
+  .right {
+    padding-right: 20px;
+  }
+
+  .left, .right {
+    display: block;
+    margin-bottom: 10px; 
+    text-align: center;
+  }
+
+  .left a, .right a {
+    font-size: 12px;
+  }
+}
+
+
+
+
+/* result */
+.result-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url('./image/background.avif');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  opacity: 0.8; 
+  z-index: -1; 
+  filter: brightness(90%); 
+  text-align: center;
+}
+.container {
+  position: relative; 
+  z-index: 1;
+  color: white; 
+  padding: 20px;
+  text-align: center;
+}
+
+.score{
+  padding-left: 400px;
+}
+
+.link-button {
+  padding: 10px 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+
+  cursor: pointer;
+}
+
+
+
+
+.signin{width: 100%; height: 100vh; background-color: #ffffff !important; position: relative;}
+
+.signin .box{width: 400px; height: 550px; background: #ffffff; margin: auto; }
+.signin .box form{padding: 20px 30px; color: #000; }
+.signin .box .textfiled label {color: #000 !important;}
+.border-effect{position: relative; color: #337ab7; text-decoration: none; top: 20px; }
+.border-effect::after{display: block; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background-color: #102a44; content: ""; -webkit-transition:.2s; -o-transition: .2s; transition:.2s;}
+.border-effect:hover{text-decoration: none; color: #000; cursor: pointer; }
+.border-effect:hover::after{width: 100%;}
+.signin .box .form{padding: 10px 10px;}
+.google img{width: 30px;margin-right: 10px;}
+.google{width: 100% ; font-weight: bold !important; color: #000 !important;}
+
+.signup .box{width: 400px; height: 600px;}
+.inline-text {
+  display: inline !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styling for the quiz container */
+.quiz-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title of the quiz */
+.quiz-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Question text */
+.question-text {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: #3f3f3f;
+}
+
+/* Container for options */
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Styling for each option button */
+.option-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for option buttons */
+.option-button:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/* Quit button styling */
+
+
+/* Loading text */
+.loading-text {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+
+
+.navigation-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  gap: 15px;              
+}
+
+.nav-button,
+.quit-button {
+  padding: 10px 50px;
+  font-size: 1rem;
+  /* background-color: #007bff;  */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* .nav-button:hover {
+  background-color: #0056b3; 
+} */
+
+.quit-button {
+  background-color: #dc3545;
+  
+}
+
+.quit-button:hover {
+  background-color: #a71d2a; 
+}
+/* 
+button:disabled {
+  background-color: #ccc; /* Gray for disabled buttons */
+  /* cursor: not-allowed; */
+/* }  */
+
+
+
+/* Styles for the custom quit modal */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-ok-btn,
+.modal-cancel-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-ok-btn {
+  background-color: green;
+  color: white;
+}
+
+.modal-cancel-btn {
+  background-color: red;
+  color: white;
+}
