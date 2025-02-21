@@ -13,7 +13,6 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const userRouter = require('./routes/user')
 const questionsRouter = require('./routes/questions');
-
 mongoose
   .connect('mongodb://localhost:27017/quiz_play')
   .then(() => console.log('Database connected successfully'))
