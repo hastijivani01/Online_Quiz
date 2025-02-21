@@ -16,6 +16,7 @@ function Play() {
     options: [],
   });
 
+  
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
